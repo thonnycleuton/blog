@@ -1,0 +1,36 @@
+@charset "utf-8";
+#left {
+	float: left;
+	height: 500px;
+	width: 200px;
+	background-color: #03F;
+}
+#right {
+	float: left;
+	height: 500px;
+	width: 200px;
+	background-color: #090;
+}
+#center {
+	float: left;
+	height: 500px;
+	width: 500px;
+	background-color: #F00;
+}
+#top {
+	height: 200px;
+	width: auto;
+	background-color: #60F;
+}
+#content-left {
+	float: left;
+	height: 300px;
+	width: 200px;
+	background-color: #999;
+}
+#content-right {
+	float: left;
+	background-color: #FC6;
+	height: 300px;
+	width: 300px;
+}

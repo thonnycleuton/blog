@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+/* CSS Reset Simples*/
+* {margin:0;padding:0;}
+/* fixing firefox bug */
+div:after, ol:after, li:after, form:after, ul:after, dl:after {content:".";display:block;clear:both;visibility:hidden;height:0;overflow:hidden;}
+ 
+.gallery {
+  /* tirando o estilo de lista (bullets) */
+  list-style: none;
+  /* informando uma altura automática para elementos pais (evita alguns bugs em navegadores) */
+  height: 100%;
+  padding:30px;
+}
+.gallery li {
+  width: 110px;
+  height: 100%;
+  display: inline-block;  
+  margin: 5px 10px 10px;
+  position:relative;
+  z-index:1;
+  background: #fff;
+  padding:10px;
+  border:1px solid #999;
+  /*radius*/-moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px;border-radius: 5px;
+  /*shadow*/-moz-box-shadow: 0px 1px 2px #999; -webkit-box-shadow: 0px 1px 2px #999; box-shadow: 0px 1px 2px #999;
+}
+ 
+.gallery li:nth-child(2n+1) {-webkit-transform: rotate(4deg);-moz-transform: rotate(4deg);-o-transform: rotate(4deg);}
+.gallery li:nth-child(3n+1) {-webkit-transform: rotate(-4deg);-moz-transform: rotate(-4deg);-o-transform: rotate(-4deg);}
+.gallery li:hover {
+  z-index:10;
+  -moz-transition-duration: 1s;
+  -moz-transform: rotate(0deg) scale(1.85);
+  -webkit-transition-duration: 1s;
+  -webkit-transform: rotate(0deg) scale(1.85);
+  -o-transition-duration: 1s;
+  -o-transform: rotate(0deg) scale(1.85);
+}
+.gallery img {
+  width: 108px;
+  height: auto; 
+}

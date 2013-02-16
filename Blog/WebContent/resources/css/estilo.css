@@ -1,0 +1,7 @@
+*{
+	background-color: threedhighlight;
+}
+
+table td,table th{
+	border: 1px solid green;
+}
