@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
@@ -9,7 +8,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Exemplo de Listagem</title>
-<link rel="stylesheet" href="<c:url value='/resources/css/bootstrap.css'/>" />
+<link rel="stylesheet"
+	href="<c:url value='/resources/css/bootstrap.css'/>" />
 <link rel="stylesheet" href="<c:url value='/resources/css/style2.css'/>" />
 </head>
 <body>
@@ -21,40 +21,24 @@
 			</h2>
 		</div>
 		<nav>
-		<ul>
-			<li class="current_page_item"><a href="#" accesskey="1" title="">home</a>
-			</li>
-			<li><a href="error.jsp" accesskey="2" title="">error</a></li>
-			<li><a href="dummy.jsp" accesskey="4" title="">dummy</a></li>
-			<li><a href="loginForm.jsp" accesskey="5" title="">login Form</a></li>
-			<li><a href="userlogout.action" accesskey="5" title="">Logout</a></li>
-		</ul>
+			<c:import url="module/menu.jsp"></c:import>
 		</nav> </header>
 		<div id="center">
+			<div class="breadcrumb">
+<%-- 				<c:import url="usuario_logado.jsp"></c:import> --%>
+			</div>
 			<aside>
+<%-- 				<c:import url="loginForm.jsp"></c:import> --%>
 			</aside>
 			<article>
 			<div id="content-top">
-				<c:forEach var="artigo" items="${artigos}">
-					<div class="span8">
-						<h1>${artigo.titulo }</h1>
-						<p>${artigo.conteudo}</p>
-						<div>
-							<span class="badge badge-success">Postado em <fmt:formatDate
-									type="both" dateStyle="long" timeStyle="short"
-									value="${artigo.data}" />
-							</span>
-							<div class="pull-right">
-								<span class="label">alice</span> <span class="label">story</span>
-								<span class="label">blog</span> <span class="label">personal</span>
-							</div>
-						</div>
-					</div>
-				</c:forEach>
+				<c:import url="module/artigoList.jsp"></c:import>
+				<c:import url="module/usuarioList.jsp"></c:import>
 			</div>
 			<br />
 			</article>
-			<section> </section>
+			<section>
+			</section>
 		</div>
 		<footer>
 		<p>

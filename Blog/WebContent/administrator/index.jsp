@@ -21,19 +21,18 @@
 			</h2>
 		</div>
 		<nav>
-			<c:import url="menu.jsp"></c:import>
+			<c:import url="../module/menu.jsp"></c:import>
 		</nav> </header>
 		<div id="center">
 			<div class="breadcrumb">
 				<c:import url="usuario_logado.jsp"></c:import>
 			</div>
 			<aside>
-				<c:import url="loginForm.jsp"></c:import>
 			</aside>
 			<article>
 			<div id="content-top">
-				<c:import url="artigoList.jsp"></c:import>
-				<c:import url="usuarioList.jsp"></c:import>
+				<c:import url="../module/artigoList.jsp"></c:import>
+				<c:import url="../module/usuarioList.jsp"></c:import>
 				<c:import url="novoArtigo.jsp"></c:import>
 				<c:import url="novoUsuario.jsp"></c:import>
 			</div>
